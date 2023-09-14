@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submit</title>
+    <link rel="stylesheet" href="./fos-style.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="heading">
+            <a href="../fos-home.html"><img id="logo" src="./Images/Uop-logo.png" alt="Logo"></a>
+            <div class="title">
+                <h1>Faculty of Science</h1>
+                <h2>University of Peradeniya</h2>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <nav>
+                <a href="">Study</a> |
+                <a href="">Research</a> |
+                <a href="">Departments</a> |
+                <a href="">Staff</a> |
+                <a href="">Students</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="form-container-box">
+        <div class="form-container">
+            <h4>-Registration Form-</h4>
+            <hr>
+            <form action="fos-success.html" target="_blank" id="form">
+                <div class="list">
+                    <ul id="left-list">
+                        <li class="inputs">
+                            <lable for="name">Name with initial</lable>
+                            <input id="name" name="name" placeholder="  Ex: M.N.Andro Johnson" />
+                            <div class="error"></div>
+                        </li>
+                        <li class="inputs">
+                            <lable for="gender">Gender</lable>
+                            <input type="radio" id="male" name="gender" /> Male
+                            <input type="radio" id="female" name="gender" /> Female
+                            <div class="error"></div>
+                        </li>
+                        <li class="inputs">
+                            <lable for="dob">Date of birth</lable>
+                            <input id="dob" name="dob" placeholder="  DD / MM / YYYY" />
+                            <div class="error"></div>
+                        </li>
+                        <li class="inputs">
+                            <lable for="nic">NIC</lable>
+                            <input id="nic" name="nic" placeholder="   XXXXXXXXXX"/>
+                            <div class="error"></div>
+                        </li>
+                        <li class="inputs">
+                            <lable for="address">Address</lable>
+                            <input id="address" name="address" />
+                            <div class="error"></div>
+                        </li>
+                        <li class="inputs">
+                            <lable for="telephone">Phone no</lable>
+                            <input id="telephone" name="telephone" placeholder="   XXXXXXXXXX"/>
+                            <div class="error"></div>
+                        </li>
+                        <li class="inputs">
+                            <lable for="Zscore">Z-score</lable>
+                            <input id="Zscore" name="Zscore" placeholder="   X.XXX"/>
+                            <div class="error"></div>
+                        </li>
+                    </ul>
+                    <ul id="right-list">
+                        <li id="course-options">
+                            <lable for="course">Course selected</lable>
+                            <select name="course" onchange="optionSelector();" id="course-select">
+                                <option value="">Choose here</option>
+                                <option value="bio">Biological science</option>
+                                <option value="phy">Physical science</option>
+                                <option value="SOR">Statistics and Operation Research</option>
+                                <option value="CM">Computation Management</option>
+                            </select>
+                            <div class="error"></div>
+                        </li>
+                        <div id="Combination-select-container">
+                            <li id="Combination-select">
+                                <p><br><br>Subject combination Preference</p>
+                                <p id="sub-select-detail">(Select according to the preference order)</p>
+
+                                <lable for="1st-pre">First preference</lable>
+                                <select id="1st-pre" name="1st-pre">
+                                    <option value="">Choose here</option>
+                                    <option value="BBC">Biology**, Chemistry</option>
+                                    <option value="BCS">Bialogy*, Chemistry, Statistics</option>
+                                    <option value="BCC">Bialogy*, Chemistry, Computer Science</option>
+                                    <option value="CGP">Chemistry, Geology, Physics</option>
+                                    <option value="CMM">Chemistry, Mathematics**</option>
+                                    <option value="CCS">Chemistry, Computer Science, Statistics</option>
+                                    <option value="MCS">Mathematics*, Computer Science, Statistics</option>
+                                    <option value="PMM">Physics, Mathematics**</option>
+                                    <option value="SMM">Statistics, Mathematics**</option>
+                                    <option value="PMS">Physics, Mathematics*, Statistics</option>
+                                </select>
+                                <div class="error"></div>
+                            </li>
+                            <li>
+                                <lable for="2nd-pre">Second preference</lable>
+                                <select id="2nd-pre" name="2nd-pre">
+                                    <option value="">Choose here</option>
+                                    <option value="BBC">Biology**, Chemistry</option>
+                                    <option value="BCS">Bialogy*, Chemistry, Statistics</option>
+                                    <option value="BCC">Bialogy*, Chemistry, Computer Science</option>
+                                    <option value="CGP">Chemistry, Geology, Physics</option>
+                                    <option value="CMM">Chemistry, Mathematics**</option>
+                                    <option value="CCS">Chemistry, Computer Science, Statistics</option>
+                                    <option value="MCS">Mathematics*, Computer Science, Statistics</option>
+                                    <option value="PMM">Physics, Mathematics**</option>
+                                    <option value="SMM">Statistics, Mathematics**</option>
+                                    <option value="PMS">Physics, Mathematics*, Statistics</option>
+                                </select>
+                                <div class="error"></div>
+                            </li>
+                            <li>
+                                <lable for="3rd-pre">Third preference</lable>
+                                <select id="3rd-pre"  name="3rd-pre">
+                                    <option value="">Choose here</option>
+                                    <option value="BBC">Biology**, Chemistry</option>
+                                    <option value="BCS">Bialogy*, Chemistry, Statistics</option>
+                                    <option value="BCC">Bialogy*, Chemistry, Computer Science</option>
+                                    <option value="CGP">Chemistry, Geology, Physics</option>
+                                    <option value="CMM">Chemistry, Mathematics**</option>
+                                    <option value="CCS">Chemistry, Computer Science, Statistics</option>
+                                    <option value="MCS">Mathematics*, Computer Science, Statistics</option>
+                                    <option value="PMM">Physics, Mathematics**</option>
+                                    <option value="SMM">Statistics, Mathematics**</option>
+                                    <option value="PMS">Physics, Mathematics*, Statistics</option>
+                                </select>
+                                <div class="error"></div>
+                            </li>
+                            <li>
+                                <lable for="4th-pre">Fourth preference</lable>
+                                <select id="4th-pre"  name="4th-pre">
+                                    <option value="">Choose here</option>
+                                    <option value="BBC">Biology**, Chemistry</option>
+                                    <option value="BCS">Bialogy*, Chemistry, Statistics</option>
+                                    <option value="BCC">Bialogy*, Chemistry, Computer Science</option>
+                                    <option value="CGP">Chemistry, Geology, Physics</option>
+                                    <option value="CMM">Chemistry, Mathematics**</option>
+                                    <option value="CCS">Chemistry, Computer Science, Statistics</option>
+                                    <option value="MCS">Mathematics*, Computer Science, Statistics</option>
+                                    <option value="PMM">Physics, Mathematics**</option>
+                                    <option value="SMM">Statistics, Mathematics**</option>
+                                    <option value="PMS">Physics, Mathematics*, Statistics</option>
+                                </select>
+                                <div class="error"></div>
+                            </li>
+                            <li>
+                                <lable for="5th-pre">Fifth preference</lable>
+                                <select id="5th-pre"  name="5th-pre">
+                                    <option value="">Choose here</option>
+                                    <option value="BBC">Biology**, Chemistry</option>
+                                    <option value="BCS">Bialogy*, Chemistry, Statistics</option>
+                                    <option value="BCC">Bialogy*, Chemistry, Computer Science</option>
+                                    <option value="CGP">Chemistry, Geology, Physics</option>
+                                    <option value="CMM">Chemistry, Mathematics**</option>
+                                    <option value="CCS">Chemistry, Computer Science, Statistics</option>
+                                    <option value="MCS">Mathematics*, Computer Science, Statistics</option>
+                                    <option value="PMM">Physics, Mathematics**</option>
+                                    <option value="SMM">Statistics, Mathematics**</option>
+                                    <option value="PMS">Physics, Mathematics*, Statistics</option>
+                                </select>
+                                <div class="error"></div>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+                <div class="buttons">
+                    <button id="submit-btn" type="submit">Submit</button>
+                    <a id="reset-btn" href="./form-file.html"><span>Reset</span></a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div>
+            <iframe src="https://www.youtube.com/embed/RuYY05PEbDI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+             gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+        </div>
+        <div>
+            <div class="footer-container-right">
+                <div id="deparments">
+                    <h4>Departments</h4>
+                    <a href="#">Biology</a>
+                    <a href="#">Geoecology</a>
+                    <a href="#">Physics</a>
+                    <a href="#">Chemistry</a>
+                    <a href="#">Computer Science</a>
+                    <a href="#">Mathematics</a>
+                </div>
+                <div class="Academics">
+                    <h4>Academics</h4>
+                    <a href="#">Why study at UoP</a>
+                    <a href="#">Degree Programmes</a>
+                    <a href="#">Exchange Programmes</a>
+                    <a href="#">Short term courses</a>
+                    <a href="#">Summer schools</a>
+                    <a href="#">Academic Calendar</a>
+                </div>
+                <div class="Links">
+                    <h4>Fos Media</h4>
+                    <a href="#">Web</a>
+                    <a href="#">Students' Blog</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                </div>
+            </div>
+            <div id="copyright">Copyright &copy; 2022 Faculty of Science. Powered by Computer Science Unit.</div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="./functions.js"></script>
+</body>
+
+</html>
